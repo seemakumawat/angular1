@@ -1,0 +1,85 @@
+<p>databinding works!</p>
+<div class="row">
+<div class="col-4">
+    One way data binding
+    <div class="row">
+            <div class="col-4 bg-success">
+                <h4 class="bg-primary">Using interpolation</h4>
+            <h5 >Name={{name}}</h5>
+            <h5 >Roll no={{rollno}}</h5>
+            <h5 >Course={{course}}</h5>
+            <h5 >sem={{semester}}</h5>
+            </div>
+            <div class="col-6 bg-success">
+                <h4 class="bg-primary">Using Properties binding</h4>
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" class="form-control"  [value]="name">
+                    </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Roll no.</label>
+                    <input type="number" class="form-control" [value]="rollno">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Course</label>
+                    <input type="text" class="form-control"  [value]="course">
+                    </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Semester</label>
+                    <input type="text" class="form-control" [value]="semester">
+                  </div>
+                  <button type="submit" (click)='showalert()' class="btn btn-primary">Submit</button>
+                </form>
+
+
+
+            </div>
+    </div>
+    
+</div>
+<div class="col-4">
+two way data binding
+<div class="row">
+  
+        <div class="col-6 bg-success">
+            <h4 class="bg-primary">Using ngModel</h4>
+
+           
+              <div class="mb-3">
+                <label for="" class="form-label">Name</label>
+                <input type="text" [(ngModel)]='name' class="form-control" />-{{name}}
+                </div>
+               
+              <!-- <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Course</label>
+                <input type="text" class="form-control"  [value]="course">
+                </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Semester</label>
+                <input type="text" class="form-control" [value]="semester">
+              </div>  -->
+              <button type="submit" (click)='showalert()' class="btn btn-primary">Submit</button>
+            
+
+
+
+    
+    </div>
+    </div>
+</div>
+<div class="col-4">
+use signal    
+<div class="row">
+    <div class="col-6 bg-success">
+        <h4 class="bg-primary">Using ngModel</h4>
+        <form>
+    
+            <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Signal </label>
+            <input type="text" class="form-control" value="{{sn()}}">
+          </div>
+  </form>
+    </div>
+</div>
+</div>
